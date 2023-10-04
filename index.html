@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>위드굿즈</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/위드굿즈.css">
+    <script src="lib/jquery-3.7.0.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        $(function () {
+
+            var swiper = new Swiper(".mySwiper", {
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    dynamicBullets: true,
+                },
+            });
+            $('.menu_open').click(function () {
+                $('nav').css({
+                    'left': '0',
+                    'transition': '0.5s'
+                })
+            })
+            $('.menu_close').click(function () {
+                $('nav').css({
+                    'left': '-100%',
+                    'transition': '0.5s'
+                })
+            })
+            $('.cont01 .left > ul li').click(function () {
+                $('.cont01 .left > ul li').removeClass('on')
+                $('.cont01 .left > ul li').eq($(this).index()).addClass('on')
+                $('.right .list').removeClass('on')
+                $('.right .list').eq($(this).index()).addClass('on')
+                $('.cont01 .cont01_bg').removeClass('on')
+                $('.cont01 .cont01_bg').eq($(this).index()).addClass('on')
+            })
+            //let smallImage = $('.cont02 .box_right .right_bottom bottom_item')
+            //let bigImage = $('.cont02 .box_left')
+            //smallImage.mouseenter(function () {
+            //let bigImageChange = $(this).find('img').attr('src')
+            // let bigTextChange = $(this).find('h4').text()
+            //bigImage.attr('src', bigImageChange)
+            //$('..cont02 .box_right .right_top').text(bigTextChange)
+            $('.cont02 .box_right .right_bottom .bottom_item').mouseenter(function () {
+                $('.cont02 .item_box .box_left').removeClass('on')
+                $('.cont02 .item_box .box_left').eq($(this).index()).addClass('on')
+                $('.cont02 .item_box .box_right .right_top').removeClass('on')
+                $('.cont02 .item_box .box_right .right_top').eq($(this).index()).addClass('on')
+            })
+        })//jquery end
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="inner">
+            <div>
+                <h1><a href="#"><img src="img/굿즈1/FireShot Capture 037 - 위드굿즈 - withgoods.net.png" alt=""></a></h1>
+            </div>
+
+            <div class="menu_open">
+                <p>메뉴보기</p>
+            </div><!-- .menu_open -->
+
+            <nav>
+                <div class="menu_close">
+                    <p>메뉴닫기</p>
+                </div><!-- .menu_close -->
+                <ul class="gnb">
+                    <li><a href="#">굿즈샵</a></li>
+                    <li><a href="#">굿즈제작</a></li>
+                    <li><a href="#">단체주문</a></li>
+                    <li><a href="#">굿즈컨설팅</a></li>
+                    <li><a href="#">리뷰</a></li>
+                </ul><!-- .gnb end-->
+            </nav>
+        </div><!-- .inner end -->
+    </header>
+    <section class="main_visual">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/굿즈1/main11.png" alt=""></div>
+                <div class="swiper-slide"><img src="img/굿즈1/main22.png" alt=""></div>
+                <!-- <div class="swiper-slide"><img src="img/굿즈1/main33.jpeg" alt=""></div> -->
+                <div class="swiper-slide"><img src="img/굿즈1/main44.png" alt=""></div>
+                <div class="swiper-slide"><img src="img/굿즈1/main55.png" alt=""></div>
+                <!-- <div class="swiper-slide"><img src="img/굿즈1/main66.jpeg" alt=""></div> -->
+                <div class="swiper-slide"><img src="img/굿즈1/main77.png" alt=""></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section><!-- .main_visual end -->
+    <section class="cont01">
+        <div class="left">
+            <ul>
+                <li class="on"><a href="#">마음을 적시는 빗소리</a></li>
+                <li><a href="#">싱그러운 여름보내기</a></li>
+                <li><a href="#">시원한 바다 보면서 힐링하기~</a></li>
+                <li><a href="#">동물을 보호해요!</a></li>
+                <li><a href="#">오비라거 마스코트 랄라베어</a></li>
+            </ul>
+        </div><!-- .left end -->
+        <div class="right">
+            <div class="list on">
+                <div class="item">
+                    <figure>
+                        <img src="img/굿즈1/만춘.png" alt="">
+                    </figure>
+                    <div>
+                        <h4>by 즈윤윤</h4>
+                        <h2>내이름은 곽민춘</h2>
+                        <p>치얼스 비어캔 글라스</p>
+                        <strong>17,500원</strong>
+                    </div>
+                </div><!-- .item end -->
+                <div class="item">
+                    <figure>
+                        <img src="img/굿즈1/rain.png" alt="">
+                    </figure>
+                    <div>
+                        <h4>by Ownground</h4>
+                        <h2>Rainy Day</h2>
+                        <p>하이볼 유리컵</p>
+                        <strong>15,000원</strong>
+                    </div>
+                </div><!-- .item end -->
+            </div><!-- .list end -->
+            <div class="list">
+                <div class="item">
+                    <figure>
+                        <img src="img/굿즈1/cont01_2.png" alt="">
+                    </figure>
+                    <div>
+                        <h4>by 씨솔</h4>
+                        <h2>와이키키비치리조트</h2>
+                        <p>베이직 패브릭 포스터(세로형)</p>
+                        <strong>24,000원</strong>
+                    </div>
+                </div><!-- .item end -->
+                <div class="item">
+                    <figure>
+                        <img src="img/굿즈1/cont01_2-1.png" alt="">
+                    </figure>
+                    <div>
+                        <h4>by 호왕</h4>
+                        <h2>수박 냠! 글라스</h2>
+                        <p>위드 그랑 글라스</p>
+                        <strong>25,000원</strong>
+                    </div>
+                </div><!-- .item end -->
+            </div><!-- .list end -->
+            <div class="list">
+                <div class="item">
+                    <figure>
+                        <img src="img/굿즈1/cont01_3.png" alt="">
+                    </figure>
+                    <div>
+                        <h4>by wuilo</h4>
+                        <h2>파도</h2>
+                        <p>하이볼 유리컵</p>
+                        <strong>15,000원</strong>
+                    </div>
+                </div><!-- .item end -->
+                <div class="item">
+                    <figure>
+                        <img src="img/굿즈1/cont01_3-1.png" alt="">
+                    </figure>
+                    <div>
+                        <h4>by 유하</h4>
+                        <h2>The wave</h2>
+                        <p>하이볼 유리컵</p>
+                        <strong>15,000원</strong>
+                    </div>
+                </div><!-- .item end -->
+            </div><!-- .list end -->
+            <div class="list">
+                <div class="item">
+                    <figure>
+                        <img src="img/굿즈1/cont01_4.png" alt="">
+                    </figure>
+                    <div>
+                        <h4>by 피리피리</h4>
+                        <h2>복숭아 꿈 속 수달달</h2>
+                        <p>하이볼 유리컵</p>
+                        <strong>15,000원</strong>
+                    </div>
+                </div><!-- .item end -->
+                <div class="item">
+                    <figure>
+                        <img src="img/굿즈1/cont01_4-1.png" alt="">
+                    </figure>
+                    <div>
+                        <h4>by nLoro</h4>
+                        <h2>바다거북</h2>
+                        <p>하이볼 유리컵</p>
+                        <strong>15,000원</strong>
+                    </div>
+                </div><!-- .item end -->
+            </div><!-- .list end -->
+            <div class="list">
+                <div class="item">
+                    <figure>
+                        <img src="img/굿즈1/cont01_5.png" alt="">
+                    </figure>
+                    <div>
+                        <h4>by 오비-라거</h4>
+                        <h2>랄라베어 클래식</h2>
+                        <p>치얼스 비어캔 글라스</p>
+                        <strong>17,500원</strong>
+                    </div>
+                </div><!-- .item end -->
+                <div class="item">
+                    <figure>
+                        <img src="img/굿즈1/cont01_5-1.png" alt="">
+                    </figure>
+                    <div>
+                        <h4>by 오비-라거</h4>
+                        <h2>랄라베어 클래식</h2>
+                        <p>비어 유리컵</p>
+                        <strong>18,500원</strong>
+                    </div>
+                </div><!-- .item end -->
+            </div><!-- .list end -->
+            <div class="cont01_bg on">
+                <img src="img/굿즈1/CONTBG1.jpg" alt="">
+            </div><!-- .cont01_bg end -->
+            <div class="cont01_bg">
+                <img src="img/굿즈1/cont01_bg02.png" alt="">
+            </div><!-- .cont01_bg end -->
+            <div class="cont01_bg">
+                <img src="img/굿즈1/cont01_bg03.png" alt="">
+            </div><!-- .cont01_bg end -->
+            <div class="cont01_bg">
+                <img src="img/굿즈1/cont01_bg04.png" alt="">
+            </div><!-- .cont01_bg end -->
+            <div class="cont01_bg">
+                <img src="img/굿즈1/cont01_bg05.png" alt="">
+            </div><!-- .cont01_bg end -->
+        </div><!-- .right end -->
+    </section><!-- .cont01 end -->
+    <section class="cont02">
+        <div class="inner">
+            <div class="title">
+                <h2>취향별 인기 굿즈</h2>
+                <a href="#">전체보기</a>
+            </div><!-- .title end -->
+            <div class="item_box">
+                <div class="box_left on">
+                    <img src="img/굿즈1/cont02-1.png" alt="">
+                </div><!-- .box_left end -->
+                <div class="box_left">
+                    <img src="img/굿즈1/cont02-2.png" alt="">
+                </div><!-- .box_left end -->
+                <div class="box_left">
+                    <img src="img/굿즈1/cont02-3.png" alt="">
+                </div><!-- .box_left end -->
+                <div class="box_right">
+                    <div class="right_top on">
+                        <h2>룡비</h2>
+                        <h5>라운드 머그컵|머그컵</h5>
+                        <p>신이나서 신나게 춤추는 귀여운 공룡 룡비</p>
+                        <a href="#">바로가기</a>
+                    </div><!-- .right_top end -->
+                    <div class="right_top">
+                        <h2>테디베어와 친구들</h2>
+                        <h5>스퀘어 머그컵|머그컵</h5>
+                        <p>어린날의 기억을 담은 테디베어와 친구들입니다.</p>
+                        <a href="#">바로가기</a>
+                    </div><!-- .right_top end -->
+                    <div class="right_top">
+                        <h2>EVERYTHING IS IMPORTANT</h2>
+                        <h5>치얼스 비어캔 글라스|데일리 컬렉션</h5>
+                        <p>전아영 작가의 작품이 프린트 된 전시 굿즈 입니다</p>
+                        <a href="#">바로가기</a>
+                    </div><!-- .right_top end -->
+                    <div class="right_bottom">
+                        <div class="bottom_item">
+                            <img src="img/굿즈1/cont02-1.png" alt="">
+                            <h4>룡비</h4>
+                        </div><!-- .bottom_item end-->
+                        <div class="bottom_item">
+                            <img src="img/굿즈1/cont02-2.png" alt="">
+                            <h4>테디베어와 친구들</h4>
+                        </div><!-- .bottom_item end-->
+                        <div class="bottom_item">
+                            <img src="img/굿즈1/cont02-3.png" alt="">
+                            <h4>EVERYTHING</h4>
+                        </div><!-- .bottom_item end-->
+                    </div><!-- .right_bottom end -->
+                </div><!-- .box_right end -->
+
+            </div><!-- .item_box end -->
+        </div><!-- .inner end  -->
+    </section><!-- .cont02 end -->
+    <section class="cont03">
+        <div class="inner">
+            <div class="title">
+                <h2>생생한 리뷰</h2>
+                <a href="#">전체보기</a>
+            </div><!-- .title end -->
+            <div class="list">
+                <div class="item">
+                    <figure>
+                        <img src="img/굿즈1/review.jpeg" alt="">
+                    </figure>
+                    <div class="text">
+                        <h4>캭 진짜 깜찍하고 너무 귀여워요. 유리컵 사이...</h4>
+                        <p>나무인 캐릭터가 너무 귀여워서 사보았는데 이미지랑 실물 똑같고 색상조합이 이뻐요. 유리컵 튼튼해서 오래 사용할 수 있을 것 같아요.</p>
+                    </div><!-- .text end -->
+                </div><!-- .item end -->
+                <div class="item">
+                    <figure>
+                        <img src="img/굿즈1/review1.jpeg" alt="">
+                    </figure>
+                    <div class="text">
+                        <h4>운동 시작하면서 텀블러 샀는데 넘 귀여워요</h4>
+                        <p>인쇄 퀄리티도 좋고 넘 궈여워서 맨날 가지고 다닐것 같아요</p>
+                    </div><!-- .text end -->
+                </div><!-- .item end -->
+                <div class="item">
+                    <figure>
+                        <img src="img/굿즈1/review2.jpeg" alt="">
+                    </figure>
+                    <div class="text">
+                        <h4>실물 너무 귀엽습니다 기분이 좋아져요
+                        </h4>
+                        <p>그림이 정위치에 잘 예쁘게 나왔어요! 컵도 무겁거나 두껍지 않고 이상적인 표준 머그입니다. 용량도 딱 적당해요. 색상이 혹시 누렇거나 파랗지 않을까 걱정했는데 깔끔한
+                            완벽한 흰색이에요. 책상위에 놓으니 책상이 정리정돈된 느낌이에요!!
+                        </p>
+                    </div><!-- .text end -->
+                </div><!-- .item end -->
+            </div><!-- .list end -->
+        </div><!-- .inner end -->
+    </section><!-- .cont03 end -->
+    <footer>
+        <div class="inner">
+            <ul>
+                <li><a href="#">(주)공공공간</a></li>
+                <li><a href="#">사업자소개</a></li>
+                <li><a href="#">서비스 소개</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">자주묻는질문</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">저작권대리중개업</a></li>
+                <li><a href="#">표준업무규정</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">문의하기</a></li>
+            </ul>
+        </div><!-- .inner -->
+    </footer>
+</body>
+
+</html>
